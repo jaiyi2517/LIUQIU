@@ -85,7 +85,7 @@
 </head>
 <body class="min-h-screen">
 
-    <header class="header-bg relative pt-12 pb-24 px-6 overflow-hidden shadow-soft">
+    <header class="header-bg relative pt-12 pb-18 px-6 overflow-hidden shadow-soft">
         <div class="absolute top-0 left-0 w-full h-full opacity-10">
             <!-- 裝飾性背景圖案 -->
             <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,21 +101,25 @@
 
     <main class="max-w-2xl mx-auto px-4 -mt-12 relative z-20 pb-20">
         
-        <!-- Tabs -->
-        <div class="flex justify-between md:justify-center md:gap-8 items-center bg-white/80 backdrop-blur-md p-2 rounded-2xl shadow-soft mb-8">
-            <button onclick="switchTab(0)" id="tab-0" class="flex-1 md:flex-none px-4 py-3 rounded-xl text-center transition-all duration-300 tab-active">
-                <div class="text-xs font-bold mb-1 opacity-80">Day 1</div>
-                <div class="text-sm md:text-base">7/31 (五)</div>
-            </button>
-            <button onclick="switchTab(1)" id="tab-1" class="flex-1 md:flex-none px-4 py-3 rounded-xl text-center transition-all duration-300 tab-inactive">
-                <div class="text-xs font-bold mb-1 opacity-80">Day 2</div>
-                <div class="text-sm md:text-base">8/1 (六)</div>
-            </button>
-            <button onclick="switchTab(2)" id="tab-2" class="flex-1 md:flex-none px-4 py-3 rounded-xl text-center transition-all duration-300 tab-inactive">
-                <div class="text-xs font-bold mb-1 opacity-80">Day 3</div>
-                <div class="text-sm md:text-base">8/2 (日)</div>
-            </button>
-        </div>
+<!-- Tabs -->
+<div class="flex justify-center gap-2 md:gap-6 items-center bg-white/80 backdrop-blur-md p-2 rounded-2xl shadow-soft mb-8">
+    
+    <!-- 4. 若不想讓按鈕填滿寬度，可以考慮拿掉 flex-1 改用 w-24 (固定寬度) 或直接讓它自然縮小 -->
+    <button onclick="switchTab(0)" id="tab-0" class="px-3 py-2 rounded-xl text-center transition-all duration-300 tab-active">
+        <div class="text-xs font-bold mb-1 opacity-80">Day 1</div>
+        <div class="text-sm">7/31 (五)</div>
+    </button>
+
+    <button onclick="switchTab(1)" id="tab-1" class="px-3 py-2 rounded-xl text-center transition-all duration-300 tab-inactive">
+        <div class="text-xs font-bold mb-1 opacity-80">Day 2</div>
+        <div class="text-sm">8/1 (六)</div>
+    </button>
+
+    <button onclick="switchTab(2)" id="tab-2" class="px-3 py-2 rounded-xl text-center transition-all duration-300 tab-inactive">
+        <div class="text-xs font-bold mb-1 opacity-80">Day 3</div>
+        <div class="text-sm">8/2 (日)</div>
+    </button>
+</div>
 
         <!-- 行程內容容器 -->
         <div id="timeline-container" class="fade-enter-active bg-transparent px-0">
@@ -135,8 +139,8 @@
                 { time: "14:30", title: "兌換藍白航運船票&候位", icon: "fa-solid fa-ticket" },
                 { time: "15:20", title: "搭船", icon: "fa-solid fa-ferry", highlight: true },
                 { time: "15:45", title: "抵達小琉球", icon: "fa-solid fa-anchor" },
-                { time: "16:00", title: "前往城隍廟取車-999機車行", icon: "fa-solid fa-motorcycle", link: "https://share.google/xDTkkJJl4e3Y9zLtS" },
-                { time: "16:15", title: "抵達白燈樓旅宿辦理check-in", icon: "fa-solid fa-house", link: "https://maps.app.goo.gl/RkZeFgsYVj5iT9RF9" },
+                { time: "16:00", title: "前往城隍廟取車-999機車", icon: "fa-solid fa-motorcycle", link: "https://share.google/xDTkkJJl4e3Y9zLtS" },
+                { time: "16:15", title: "白燈樓旅宿check-in", icon: "fa-solid fa-house", link: "https://maps.app.goo.gl/RkZeFgsYVj5iT9RF9" },
                 { time: "16:45", title: "小山看海藝文園區", icon: "fa-solid fa-camera", link: "https://share.google/EiY5U80DVSXdujULs", colorType: "mint" },
                 { time: "18:30", title: "【晚餐】-漁人酒肆", icon: "fa-solid fa-utensils", link: "https://share.google/OauLkcGonKsCTLp8u", colorType: "yellow" },
                 { time: "20:00", title: "微醺之夜(回民宿or 酒吧)", desc: "待選:Sea Daze/酒窩 Bar Cave", icon: "fa-solid fa-wine-glass", colorType: "brand" }
@@ -148,7 +152,7 @@
                 { time: "11:45", title: "【午餐】-蔡阿伯麵店", icon: "fa-solid fa-bowl-food", link: "https://share.google/7rXldrqVqDY46joxs", colorType: "yellow" },
                 { time: "14:30", title: "蛤板灣威尼斯沙灘+烏鬼洞", icon: "fa-solid fa-water", colorType: "mint"  ,link: "https://maps.app.goo.gl/bF2sgKZT5CmK17oSA"},
                 { time: "16:30", title: "【下午茶】-小本愛玉", desc: "人太多的話可以改去【烏鬼洞雪花冰】", icon: "fa-solid fa-ice-cream", link: "https://share.google/OA6bBRNh5lXwyVgnO", colorType: "yellow" },
-                { time: "17:30", title: "落日亭", icon: "fa-solid fa-sun", colorType: "mint" },
+                { time: "17:30", title: "落日亭", icon: "fa-solid fa-sun", colorType: "mint",link: "https://maps.app.goo.gl/cLgpocxsYXXtnoxL7" },
                 { time: "18:30", title: "【晚餐】-小琉球觀亭餐館", icon: "fa-solid fa-utensils", link: "https://share.google/TlhPBt88b5kjAJE0G", colorType: "yellow" },
                 { time: "21:00", title: "【宵夜】", desc: "厝琉香鹽酥雞/廟口鹹酥雞", icon: "fa-solid fa-moon", colorType: "yellow" }
             ],
