@@ -85,41 +85,39 @@
 </head>
 <body class="min-h-screen">
 
-    <header class="header-bg relative pt-8 pb-22 px-6 overflow-hidden shadow-soft">
-        <div class="absolute top-0 left-0 w-full h-full opacity-10">
-            <!-- 裝飾性背景圖案 -->
-            <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M141.5 292C80.3 292 28 244.7 28 183.5C28 122.3 80.3 75 141.5 75C202.7 75 255 122.3 255 183.5C255 244.7 202.7 292 141.5 292Z" stroke="white" stroke-width="40"/>
-                <path d="M366.5 141.5C366.5 202.7 319.2 255 258 255C196.8 255 149.5 202.7 149.5 141.5C149.5 80.3 196.8 33 258 33C319.2 33 366.5 80.3 366.5 141.5Z" stroke="white" stroke-width="40"/>
-            </svg>
-        </div>
-        <div class="relative z-2 max-w-2xl mx-auto text-center">
-            <h1 class="text-3xl md:text-4xl font-black text-white tracking-wider mb-3 drop-shadow-md">小琉球之旅</h1>
-            <p class="text-brand-bg opacity-90 text-sm md:text-base font-medium">7/31 (五) - 8/2 (日)</p>
-        </div>
-    </header>
+<!-- 頁首：增加 pb-32 或更大值，確保標題在主區塊之上 -->
+<header class="header-bg relative pt-8 pb-32 px-6 overflow-hidden shadow-soft min-h-[200px] flex flex-col justify-center">
+    <div class="absolute top-0 left-0 w-full h-full opacity-10">
+        <!-- SVG 內容不變 -->
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto text-center">
+        <h1 class="text-3xl md:text-4xl font-black text-white tracking-wider mb-3 drop-shadow-md">小琉球之旅</h1>
+        <p class="text-brand-bg opacity-90 text-sm md:text-base font-medium">7/31 (五) - 8/2 (日)</p>
+    </div>
+</header>
 
-    <main class="max-w-2xl mx-auto px-4 -mt-12 relative z-20 pb-20">
-        
-<!-- Tabs -->
-<div class="flex justify-center gap-3 md:gap-6 items-center bg-white/80 backdrop-blur-md p-2 rounded-2xl shadow-soft mb-8">
+<!-- 主區塊 -->
+<main class="max-w-2xl mx-auto px-4 -mt-12 relative z-20 pb-20">
     
-    <!-- 4. 若不想讓按鈕填滿寬度，可以考慮拿掉 flex-1 改用 w-24 (固定寬度) 或直接讓它自然縮小 -->
-    <button onclick="switchTab(0)" id="tab-0" class="px-4 py-2 rounded-xl text-center transition-all duration-300 tab-active">
-        <div class="text-xs font-bold mb-1 opacity-80">Day 1</div>
-        <div class="text-sm">7/31 (五)</div>
-    </button>
+    <!-- Tabs：加上 flex-1 讓按鈕平分寬度 -->
+    <div class="flex justify-between gap-3 md:gap-6 items-center bg-white/80 backdrop-blur-md p-2 rounded-2xl shadow-soft mb-8">
+        
+        <button onclick="switchTab(0)" id="tab-0" class="flex-1 px-4 py-2 rounded-xl text-center transition-all duration-300 tab-active">
+            <div class="text-xs font-bold mb-1 opacity-80">Day 1</div>
+            <div class="text-sm">7/31 (五)</div>
+        </button>
 
-    <button onclick="switchTab(1)" id="tab-1" class="px-4 py-2 rounded-xl text-center transition-all duration-300 tab-inactive">
-        <div class="text-xs font-bold mb-1 opacity-80">Day 2</div>
-        <div class="text-sm">8/1 (六)</div>
-    </button>
+        <button onclick="switchTab(1)" id="tab-1" class="flex-1 px-4 py-2 rounded-xl text-center transition-all duration-300 tab-inactive">
+            <div class="text-xs font-bold mb-1 opacity-80">Day 2</div>
+            <div class="text-sm">8/1 (六)</div>
+        </button>
 
-    <button onclick="switchTab(2)" id="tab-2" class="px-4 py-2 rounded-xl text-center transition-all duration-300 tab-inactive">
-        <div class="text-xs font-bold mb-1 opacity-80">Day 3</div>
-        <div class="text-sm">8/2 (日)</div>
-    </button>
-</div>
+        <button onclick="switchTab(2)" id="tab-2" class="flex-1 px-4 py-2 rounded-xl text-center transition-all duration-300 tab-inactive">
+            <div class="text-xs font-bold mb-1 opacity-80">Day 3</div>
+            <div class="text-sm">8/2 (日)</div>
+        </button>
+    </div>
+</main>
 
         <!-- 行程內容容器 -->
         <div id="timeline-container" class="fade-enter-active bg-transparent px-0">
